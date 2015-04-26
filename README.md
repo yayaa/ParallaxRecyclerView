@@ -32,6 +32,16 @@ viewHolder.getBackgroundImage().reuse();
 
 If you wish to change Parallax effects ratio, you can simple call `setParallaxRatio` on code, or you can set it by xml with `parallax_ratio` attribute.
 
+## Download
+Add library dependency to your `build.gradle` file:
+
+[![Maven Central](https://img.shields.io/maven-central/v/com.yayandroid/ParallaxRecyclerView.svg)](http://search.maven.org/#search%7Cga%7C1%7CParallaxRecyclerView)
+```groovy
+dependencies {    
+     compile 'com.yayandroid:ParallaxRecyclerView:1.0.1'
+}
+```
+
 References
 ----------
 
