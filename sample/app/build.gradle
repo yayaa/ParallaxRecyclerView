@@ -29,6 +29,5 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.0.0'
 
-    compile(name:'ParallaxRecyclerView-1.0', ext:'aar')
-    compile 'com.android.support:recyclerview-v7:+'
+    compile 'com.yayandroid:ParallaxRecyclerView:1.0'
 }
