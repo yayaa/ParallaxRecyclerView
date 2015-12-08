@@ -3,8 +3,6 @@ This library will provide you to have Parallax effect on every item of your Recy
 Sample shows with static images but it can be used with async loading images as well. 
 Tested with [Universal-Image-Loader.][1]
 
-This project is under [MIT license][2] 
-
 ![](http://yayandroid.com/data/image/ParallaxListView.gif)
 
 Compatibility
@@ -45,9 +43,34 @@ dependencies {
 References
 ----------
 
-This library has been built by our designer's insistence. She's seen [JBParallaxCell library on IOS][3] and want it to have in Android as well. Researches lead me to [this repository][4] but it wasn't quite affective as it is on IOS, so here ParallaxRecyclerView.
+This library has been built by our designer's insistence. She's seen [JBParallaxCell library on IOS][2] and want it to have in Android as well. Researches lead me to [this repository][3] but it wasn't quite affective as it is on IOS, so here ParallaxRecyclerView.
+
+## License
+
+```
+The MIT License (MIT)
+
+Copyright (c) 2015 yayandroid
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+```
 
 [1]: https://github.com/nostra13/Android-Universal-Image-Loader
-[2]: http://opensource.org/licenses/mit-license.php
-[3]: https://github.com/jberlana/JBParallaxCell
-[4]: https://github.com/bopbi/Android-Parallax-ListView-Item
+[2]: https://github.com/jberlana/JBParallaxCell
+[3]: https://github.com/bopbi/Android-Parallax-ListView-Item
