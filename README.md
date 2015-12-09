@@ -3,7 +3,7 @@ This library will provide you to have Parallax effect on every item of your Recy
 Sample shows with static images but it can be used with async loading images as well. 
 Tested with [Universal-Image-Loader.][1]
 
-![](http://yayandroid.com/data/image/ParallaxListView.gif)
+![](http://yayandroid.com/data/github_library/parallax_recyclerview/parallax_recyclerview.gif)
 
 Compatibility
 -------------
