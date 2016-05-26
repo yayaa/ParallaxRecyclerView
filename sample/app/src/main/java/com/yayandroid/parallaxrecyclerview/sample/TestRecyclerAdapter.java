@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
 import com.yayandroid.parallaxrecyclerview.ParallaxViewHolder;
 
 /**
@@ -14,13 +15,25 @@ import com.yayandroid.parallaxrecyclerview.ParallaxViewHolder;
  */
 public class TestRecyclerAdapter extends RecyclerView.Adapter<TestRecyclerAdapter.ViewHolder> {
 
+    private Context context;
     private LayoutInflater inflater;
 
+    /*
     private int[] imageIds = new int[]{R.mipmap.test_image_1,
             R.mipmap.test_image_2, R.mipmap.test_image_3,
             R.mipmap.test_image_4, R.mipmap.test_image_5};
+    */
+
+    private String[] imageUrls = new String[]{
+            "http://yayandroid.com/data/github_library/parallax_listview/test_image_1.jpg",
+            "http://yayandroid.com/data/github_library/parallax_listview/test_image_2.jpg",
+            "http://yayandroid.com/data/github_library/parallax_listview/test_image_3.png",
+            "http://yayandroid.com/data/github_library/parallax_listview/test_image_4.jpg",
+            "http://yayandroid.com/data/github_library/parallax_listview/test_image_5.png",
+    };
 
     public TestRecyclerAdapter(Context context) {
+        this.context = context;
         this.inflater = LayoutInflater.from(context);
     }
 
@@ -31,7 +44,8 @@ public class TestRecyclerAdapter extends RecyclerView.Adapter<TestRecyclerAdapte
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
-        viewHolder.getBackgroundImage().setImageResource(imageIds[position % imageIds.length]);
+        // viewHolder.getBackgroundImage().setImageResource(imageIds[position % imageIds.length]);
+        Picasso.with(context).load(imageUrls[position % imageUrls.length]).into(viewHolder.getBackgroundImage());
         viewHolder.getTextView().setText("Row " + position);
 
         // # CAUTION:
