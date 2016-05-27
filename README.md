@@ -30,6 +30,8 @@ viewHolder.getBackgroundImage().reuse();
 
 If you wish to change Parallax effects ratio, you can simple call `setParallaxRatio` on code, or you can set it by xml with `parallax_ratio` attribute.
 
+P.S.: Because this library uses scaleType Matrix to calculate and re-position image as centered only, you will need to provide images which their widths are big enough to fit the screen, consider having a backend provides multiple size of images. [More info][2] Any solutions with a pull request are very welcomed :)
+
 ## Download
 Add library dependency to your `build.gradle` file:
 
@@ -43,7 +45,7 @@ dependencies {
 References
 ----------
 
-This library has been built by our designer's insistence. She's seen [JBParallaxCell library on IOS][2] and want it to have in Android as well. Researches lead me to [this repository][3] but it wasn't quite affective as it is on IOS, so here ParallaxRecyclerView.
+This library has been built by our designer's insistence. She's seen [JBParallaxCell library on IOS][3] and want it to have in Android as well. Researches lead me to [this repository][4] but it wasn't quite affective as it is on IOS, so here ParallaxRecyclerView.
 
 ## License
 
@@ -72,5 +74,6 @@ THE SOFTWARE.
 ```
 
 [1]: https://github.com/nostra13/Android-Universal-Image-Loader
-[2]: https://github.com/jberlana/JBParallaxCell
-[3]: https://github.com/bopbi/Android-Parallax-ListView-Item
+[2]: https://github.com/yayaa/ParallaxRecyclerView/issues/2
+[3]: https://github.com/jberlana/JBParallaxCell
+[4]: https://github.com/bopbi/Android-Parallax-ListView-Item
