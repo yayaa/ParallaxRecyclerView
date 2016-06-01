@@ -3,6 +3,7 @@
 
     <declare-styleable name="ParallaxImageView">
         <attr name="parallax_ratio" format="float" />
+        <attr name="center_crop" format="boolean" />
     </declare-styleable>
 
 </resources>

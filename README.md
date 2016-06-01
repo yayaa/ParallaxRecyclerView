@@ -1,7 +1,7 @@
 # ParallaxRecyclerView
 This library will provide you to have Parallax effect on every item of your RecyclerView. 
 Sample shows with static images but it can be used with async loading images as well. 
-Tested with [Universal-Image-Loader.][1]
+Tested with [Picasso][1]
 
 ![](http://yayandroid.com/data/github_library/parallax_recyclerview/parallax_recyclerview.gif)
 
@@ -30,22 +30,20 @@ viewHolder.getBackgroundImage().reuse();
 
 If you wish to change Parallax effects ratio, you can simple call `setParallaxRatio` on code, or you can set it by xml with `parallax_ratio` attribute.
 
-P.S.: Because this library uses scaleType Matrix to calculate and re-position image as centered only, you will need to provide images which their widths are big enough to fit the screen, consider having a backend provides multiple size of images. [More info][2] Any solutions with a pull request are very welcomed :)
-
 ## Download
 Add library dependency to your `build.gradle` file:
 
 [![Maven Central](https://img.shields.io/maven-central/v/com.yayandroid/ParallaxRecyclerView.svg)](http://search.maven.org/#search%7Cga%7C1%7CParallaxRecyclerView)
 ```groovy
 dependencies {    
-     compile 'com.yayandroid:ParallaxRecyclerView:1.0'
+     compile 'com.yayandroid:ParallaxRecyclerView:1.1'
 }
 ```
 
 References
 ----------
 
-This library has been built by our designer's insistence. She's seen [JBParallaxCell library on IOS][3] and want it to have in Android as well. Researches lead me to [this repository][4] but it wasn't quite affective as it is on IOS, so here ParallaxRecyclerView.
+This library has been built by our designer's insistence. She's seen [JBParallaxCell library on IOS][2] and want it to have in Android as well. Researches lead me to [this repository][3] but it wasn't quite affective as it is on IOS, so here ParallaxRecyclerView.
 
 ## License
 
@@ -73,7 +71,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ```
 
-[1]: https://github.com/nostra13/Android-Universal-Image-Loader
-[2]: https://github.com/yayaa/ParallaxRecyclerView/issues/2
-[3]: https://github.com/jberlana/JBParallaxCell
-[4]: https://github.com/bopbi/Android-Parallax-ListView-Item
+[1]: https://github.com/square/picasso
+[2]: https://github.com/jberlana/JBParallaxCell
+[3]: https://github.com/bopbi/Android-Parallax-ListView-Item
