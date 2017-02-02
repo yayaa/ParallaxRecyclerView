@@ -23,7 +23,6 @@ public class ParallaxImageView extends ImageView {
     private boolean needToTranslate = true;
     private ParallaxImageListener listener;
 
-    private int rowHeight = -1;
     private int rowYPos = -1;
     private int recyclerViewHeight = -1;
     private int recyclerViewYPos = -1;
@@ -151,24 +150,24 @@ public class ParallaxImageView extends ImageView {
         if (values == null)
             return false;
 
-        this.rowHeight = values[0];
-        this.rowYPos = values[1];
-        this.recyclerViewHeight = values[2];
-        this.recyclerViewYPos = values[3];
+        this.rowYPos = values[0];
+        this.recyclerViewHeight = values[1];
+        this.recyclerViewYPos = values[2];
         return true;
     }
 
     private void calculateAndMove() {
         float distanceFromCenter = (recyclerViewYPos + recyclerViewHeight) / 2 - rowYPos;
 
-        int imageHeight = getDrawable().getIntrinsicHeight();
+        int drawableHeight = getDrawable().getIntrinsicHeight();
+        int imageViewHeight = getMeasuredHeight();
         float scale = 1;
         if (shouldCenterCrop) {
             scale = recomputeImageMatrix();
-            imageHeight *= scale;
+            drawableHeight *= scale;
         }
 
-        float difference = imageHeight - rowHeight;
+        float difference = drawableHeight - imageViewHeight;
         float move = (distanceFromCenter / recyclerViewHeight) * difference * parallaxRatio;
 
         moveTo((move / 2) - (difference / 2), scale);

@@ -31,7 +31,7 @@ public abstract class ParallaxViewHolder extends RecyclerView.ViewHolder impleme
             int[] recyclerPosition = new int[2];
             ((RecyclerView) itemView.getParent()).getLocationOnScreen(recyclerPosition);
 
-            return new int[]{itemView.getMeasuredHeight(), itemPosition[1], ((RecyclerView) itemView.getParent()).getMeasuredHeight(), recyclerPosition[1]};
+            return new int[]{itemPosition[1], ((RecyclerView) itemView.getParent()).getMeasuredHeight(), recyclerPosition[1]};
         }
     }
 

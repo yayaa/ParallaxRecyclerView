@@ -44,7 +44,10 @@ public class ParallaxRecyclerView extends RecyclerView {
             super.onScrolled(recyclerView, dx, dy);
 
             for (int i = 0; i < recyclerView.getChildCount(); i++) {
-                ((ParallaxViewHolder) recyclerView.getChildViewHolder(recyclerView.getChildAt(i))).animateImage();
+                ViewHolder viewHolder = recyclerView.getChildViewHolder(recyclerView.getChildAt(i));
+                if (viewHolder instanceof ParallaxViewHolder) {
+                    ((ParallaxViewHolder) viewHolder).animateImage();
+                }
             }
 
             if (scrollListener != null)
